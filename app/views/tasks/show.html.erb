@@ -1,0 +1,23 @@
+<h1><%=@task.name%></h1>
+
+<p><%= @task.description %></p>
+<p>
+<% if @task.status == true %>
+<%= "[ X ]  this task is done!" %>
+<% else %>
+<%= "[   ]  this task isn't done yet, finish it quick!" %>
+<% end %></p>
+
+<%= link_to "update this task", edit_task_path %>
+
+<br>
+<br>
+
+<%= link_to "Go back to all tasks", tasks_path %>
+
+
+<!-- Should display the task's details
+(content, date of creation, etc.)
+and a back-link to the index page.
+ -->
+

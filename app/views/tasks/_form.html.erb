@@ -1,0 +1,19 @@
+<%= form_for(@task) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <% if params[:action] == 'edit' %>
+    <%= f.label :status %>
+    <p> Done? <%= f.check_box :status %> </p>
+  <% end %>
+
+  <%= f.submit %>
+<% end %>
+
+
+<!-- if 'edit'
+ show complete button
+end -->
